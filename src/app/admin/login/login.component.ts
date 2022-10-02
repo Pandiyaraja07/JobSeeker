@@ -6,32 +6,32 @@ import { UserService } from 'src/app/Service/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  SuccessMessage = ''
-  adminData: any
-  Username: FormControl=new FormControl('')
-  Password: FormControl=new FormControl('')
+  SuccessMessage = '';
+  adminData: any;
+  Username: FormControl = new FormControl('');
+  Password: FormControl = new FormControl('');
 
-  getdata(){
+  getdata() {
     const payload = {
       user_name: this.Username.value,
-      password: this.Password.value
-    }
+      password: this.Password.value,
+    };
     this.userservice.adminLogin(payload).subscribe((res) => {
-        console.log(res)
-        this.adminData = res
-    })
+      console.log(res);
+      localStorage.setItem('admin', JSON.stringify(res.accesstoken));
+      this.adminData = res;
+      this.router.navigateByUrl('AllJobs');
+    });
   }
 
-  constructor(private userservice:UserService ,private router:Router) { }
+  constructor(private userservice: UserService, private router: Router) {}
 
   routeTo() {
-    this.router.navigateByUrl('/register')
+    this.router.navigateByUrl('/register');
   }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

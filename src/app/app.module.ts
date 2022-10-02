@@ -20,6 +20,7 @@ import { CandidateRegisterComponent } from './candidate/candidate-register/candi
 import { CandidateLoginComponent } from './candidate/candidate-login/candidate-login.component';
 import { CommonComponent } from './common/common.component';
 import { ViewCandidatesComponent } from './admin/view-candidates/view-candidates.component';
+import { ViewJobComponent } from './common/view-job/view-job.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ViewCandidatesComponent } from './admin/view-candidates/view-candidates
     CandidateRegisterComponent,
     CandidateLoginComponent,
     CommonComponent,
-    ViewCandidatesComponent
+    ViewCandidatesComponent,
+    ViewJobComponent
   ],
   imports: [
     BrowserModule,
