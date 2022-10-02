@@ -32,22 +32,20 @@
                 <li class="active">
                     <a href="#"><span class="fa-stack fa-lg pull-left"><i
                                 class="fa fa-dashboard fa-stack-1x "></i></span> Admin</a>
-                    <!-- <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="#">link1</a></li>
-                        <li><a href="#">link2</a></li>
-                    </ul> -->
+                                <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                                    <li><a (click)="routeTo()">Admin Login</a></li>
+                                    <li><a (click)="routeToRegister()">Admin Register</a></li>
+                                </ul>
                 </li>
                 <li>
                     <a href="#"><span class="fa-stack fa-lg pull-left"><i
                                 class="fa fa-flag fa-stack-1x "></i></span>Candidate</a>
-                    <!-- <ul class="nav-pills nav-stacked" style="list-style-type:none;">
-                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i
-                                        class="fa fa-flag fa-stack-1x "></i></span>link1</a></li>
-                        <li><a href="#"><span class="fa-stack fa-lg pull-left"><i
-                                        class="fa fa-flag fa-stack-1x "></i></span>link2</a></li>
-                    </ul> -->
+                                <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                                    <li><a (click)="routeToCandidate()">Candidate Login</a></li>
+                                    <li><a (click)="routeToCandidateRegister()">Candidate Register</a></li>
+                                </ul>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="#"><span class="fa-stack fa-lg pull-left"><i
                                 class="fa fa-cloud-download fa-stack-1x "></i></span>Overview</a>
                 </li>
@@ -66,71 +64,10 @@
                 <li>
                     <a href="#"><span class="fa-stack fa-lg pull-left"><i
                                 class="fa fa-server fa-stack-1x "></i></span>Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
         <!-- 1-Page Content -->
     </div>
 </div>
-
-
-
-
-<!-- <mat-toolbar color="accen" >
-    <h1><b> JobSeeker </b></h1>
-    
-    <div>
-  
-    <button mat-menu-item [matMenuTriggerFor]="adminMenu" > ADMIN </button>
-            <mat-menu #adminMenu="matMenu">
-                <button mat-menu-item routerLink="/admin"> Register</button>
-                <button mat-menu-item routerLink="/admin"> Login</button>
-                
-            </mat-menu>
-    </div>
-
-    <div>
-  
-  
-    <button mat-menu-item [matMenuTriggerFor]="candidateMenu" > CANDIDATE  </button>
-            <mat-menu #candidateMenu="matMenu">
-                <button mat-menu-item routerLink="/Candidate"> Register</button>
-                <button mat-menu-item routerLink="/Candidate"> Login</button>
-                
-            </mat-menu>
-    </div>
-  
-  
-</mat-toolbar> -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>JobSeeker</title>
-</head>
-<body>
-    <div class = "home">
-    <ul>
-        <li>Admin</li>
-        <li>Candidate</li>
-    </ul>
-</div>
-</body>
-
-   
-
-    
-
-</html> -->

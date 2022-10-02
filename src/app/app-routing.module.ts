@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './admin/login/login.component';
 import { RegisterComponent } from './admin/register/register.component';
+import { ViewCandidatesComponent } from './admin/view-candidates/view-candidates.component';
 import { CandidateLoginComponent } from './candidate/candidate-login/candidate-login.component';
 import { CandidateRegisterComponent } from './candidate/candidate-register/candidate-register.component';
+import { CommonComponent } from './common/common.component';
 import { HomeComponent } from './home/home.component';
+
 
 const routes: Routes = [{
   path: 'register',
@@ -25,6 +28,14 @@ const routes: Routes = [{
 {
   path:'candidate-login',
   component: CandidateLoginComponent
+},
+{
+  path:'AllJobs',
+  component: CommonComponent
+},
+{
+  path: 'viewCandidates',
+  component: ViewCandidatesComponent
 },
 {       
   path: '', redirectTo: 'Home', pathMatch:'full'

@@ -19,6 +19,7 @@ import {MatListModule} from '@angular/material/list';
 import { CandidateRegisterComponent } from './candidate/candidate-register/candidate-register.component';
 import { CandidateLoginComponent } from './candidate/candidate-login/candidate-login.component';
 import { CommonComponent } from './common/common.component';
+import { ViewCandidatesComponent } from './admin/view-candidates/view-candidates.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CommonComponent } from './common/common.component';
     HomeComponent,
     CandidateRegisterComponent,
     CandidateLoginComponent,
-    CommonComponent
+    CommonComponent,
+    ViewCandidatesComponent
   ],
   imports: [
     BrowserModule,

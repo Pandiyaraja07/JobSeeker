@@ -1,0 +1,46 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                Company Name
+            </th>
+            <th>
+                Job Role
+            </th>
+            <th>
+                Experience
+            </th>
+            <th>
+                Salary
+            </th>
+            <th>
+                Job_Location
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let detail of allJobs">
+          <td>
+            {{detail.company_Name}}
+          </td>
+          <td>
+            {{detail.title}}
+          </td>
+          <td>
+            {{detail.experience}}
+          </td>
+          <td>
+            {{detail.salary_detail}}
+          </td>
+          <td>
+            {{detail.job_location}}
+          </td>
+          <td>
+            {{detail.description}}
+          </td>
+        </tr>
+    </tbody>
+</table>

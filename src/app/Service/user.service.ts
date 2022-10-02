@@ -7,8 +7,16 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
+  getToken():string | string[]{
+
+    return ""
+
+
+  }
+
    headers = new HttpHeaders({
     'Content-Type': 'application/json',
+    'Authorization': this.getToken()
    })
   
 
@@ -33,8 +41,14 @@ export class UserService {
    }
 
    viewAllJobs(): Observable<any>{
-    return this.http.get('http://localhost:3000/admin/view_jobs')
+    return this.http.get('http://localhost:3000/admin/view_jobs',{headers:this.headers})
    }
+
+   viewCandidates(): Observable<any>{
+    return this.http.get('http://localhost:3000/admin/view_candidates',{headers:this.headers})
+
+   }
+
 
 
 }
